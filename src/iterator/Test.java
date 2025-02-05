@@ -12,3 +12,7 @@ public class Test {
         }
     }
 }
+
+// 조별 워크샵 generic wildCard(*) 교재 이행,
+// StringContainer 에 적용된 Iterator 에 String 만이 아닌 다른
+// 타입도 적용하도록 generic 적용

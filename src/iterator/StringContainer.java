@@ -10,7 +10,7 @@ public class StringContainer implements Container{
         return new StringIterator();
     }
 
-    // 클래스 내부에 private Iterator 구현 클래스 정의\
+    // 클래스 내부에 private Iterator 구현 클래스 정의
     private class StringIterator implements Iterator{
 
         int index = 0; //default 0 // intArray 에서 현재 들여다 보는 객체

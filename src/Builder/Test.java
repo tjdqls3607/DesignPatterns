@@ -1,5 +1,8 @@
 package Builder;
 
+// 빌더 패턴은 개발자 코드 작성 밒 유지보수에는 장점이 있지만
+// Builder 클래스 자체가 복잡하고
+// 객체 생성시 메모리 낭비가 심하다.
 public class Test {
     public static void main(String[] args) {
 

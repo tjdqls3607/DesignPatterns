@@ -9,11 +9,32 @@ public class CarInvocationHandler implements InvocationHandler {
         this.car = car;
     }
 
+//    @Override
+//    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//        System.out.println("Proxy Handler invoke()");
+//        // 실제 객체의 메소드를 호출
+//        Object result = method.invoke(car, args);
+//
+//        // 실제 객체의 메소드 호출 후 추가 작업
+//
+//        return result;
+
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("Proxy Handler invoke()");
-        // 실제 객체의 메소드를 호출
+
+        // 호출된 메소드가 engineStart 이면 아무것도 하지 않는다.
+        if( method.getName().equals("engineStart") ) return null;
+
+        // 호출된 메소드가 engineStart 이면 아무것도 하지 않는다.
+        if( method.getName().equals("drive") ) {
+            car.engineStart();
+        }
+
         Object result = method.invoke(car, args);
+
+        // 실제 객체의 메소드 호출 후 추가 작업
+
         return result;
     }
 }

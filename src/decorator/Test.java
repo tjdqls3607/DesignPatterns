@@ -25,5 +25,12 @@ public class Test {
         // 만약 Truck 이 CarOne 또는 CarTwo 를 상속받았더라면 위와 같은 코드를 수행 X
         // Decorator 패턴을 적용하면 CarOne 과 CarTwo 를 모두 마치 상속받은 것처럼 수행 o
 
+
+        // SportsCar ( carOne )
+        Car sportsCarOne = new SportsCar(carOne); // 상속 대신 객체 전달
+        // carOne 과 동일한 결과
+        System.out.println(sportsCarOne.getDesc() + " " + sportsCarOne.getSpeed());
+
+
     }
 }
